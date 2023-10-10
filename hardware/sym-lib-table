@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "hermeslite")(type "Legacy")(uri "${KIPRJMOD}/libs/hermeslite.lib")(options "")(descr ""))
+  (lib (name "Radioberry")(type "Legacy")(uri "${KIPRJMOD}/libs/Radioberry.lib")(options "")(descr ""))
+  (lib (name "LM4040DIM3X-3.0_NOPB")(type "Legacy")(uri "${KIPRJMOD}/libs/LM4040DIM3X/LM4040DIM3X-3.0_NOPB.lib")(options "")(descr ""))
+)

@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\dev\git\RB2AMPController\RB2AMPController.kicad_sch</source>
+    <date>10/9/2023 7:52:24 PM</date>
+    <tool>Eeschema 7.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>RB2AMPController.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ps.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>inout.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/controller Sheet/" tstamps="/b90c7895-f645-4703-bf81-ae17c985b58b/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>controller.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="MH1">
+      <value>DNI</value>
+      <footprint>hermeslite:m3</footprint>
+      <fields>
+        <field name="Key">NOBOM</field>
+        <field name="Option">DUMMY</field>
+      </fields>
+      <libsource lib="hermeslite" part="TEST_1P" description="point"/>
+      <property name="Option" value="DUMMY"/>
+      <property name="Key" value="NOBOM"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="RB2AMPController.kicad_sch"/>
+      <property name="ki_description" value="point"/>
+      <property name="ki_keywords" value="point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>556d306f-eb7c-428b-b37e-269bc41bbe26</tstamps>
+    </comp>
+    <comp ref="MH2">
+      <value>DNI</value>
+      <footprint>hermeslite:m3</footprint>
+      <fields>
+        <field name="Key">NOBOM</field>
+        <field name="Option">DUMMY</field>
+      </fields>
+      <libsource lib="hermeslite" part="TEST_1P" description="point"/>
+      <property name="Option" value="DUMMY"/>
+      <property name="Key" value="NOBOM"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="RB2AMPController.kicad_sch"/>
+      <property name="ki_description" value="point"/>
+      <property name="ki_keywords" value="point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79f27695-6f29-46bc-bdaf-6e61b23a5313</tstamps>
+    </comp>
+    <comp ref="MH3">
+      <value>DNI</value>
+      <footprint>hermeslite:m3</footprint>
+      <fields>
+        <field name="Key">NOBOM</field>
+        <field name="Option">DUMMY</field>
+      </fields>
+      <libsource lib="hermeslite" part="TEST_1P" description="point"/>
+      <property name="Option" value="DUMMY"/>
+      <property name="Key" value="NOBOM"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="RB2AMPController.kicad_sch"/>
+      <property name="ki_description" value="point"/>
+      <property name="ki_keywords" value="point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>95b293b8-7e8b-445a-b0f9-b7c6c16ad805</tstamps>
+    </comp>
+    <comp ref="MH4">
+      <value>DNI</value>
+      <footprint>hermeslite:m3</footprint>
+      <fields>
+        <field name="Key">NOBOM</field>
+        <field name="Option">DUMMY</field>
+      </fields>
+      <libsource lib="hermeslite" part="TEST_1P" description="point"/>
+      <property name="Option" value="DUMMY"/>
+      <property name="Key" value="NOBOM"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="RB2AMPController.kicad_sch"/>
+      <property name="ki_description" value="point"/>
+      <property name="ki_keywords" value="point tp"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>58f18155-c0f8-43bf-952d-f2203b0842e4</tstamps>
+    </comp>
+    <comp ref="C101">
+      <value>100pF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>301a7bf5-f1f1-4aed-83d1-ec7d0a941ca4</tstamps>
+    </comp>
+    <comp ref="C102">
+      <value>100nF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>0bf5aa65-3fb0-453a-ad75-750d5fed8321</tstamps>
+    </comp>
+    <comp ref="C103">
+      <value>100nF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>589fe7f9-ad25-4e7f-9578-b7ced7b4321f</tstamps>
+    </comp>
+    <comp ref="C104">
+      <value>10uF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>142afc9e-f9de-4c73-bfe8-a3b73bf652bd</tstamps>
+    </comp>
+    <comp ref="C105">
+      <value>100pF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>79db9e12-be8d-4228-9ca0-5e6c32132f98</tstamps>
+    </comp>
+    <comp ref="C106">
+      <value>100nF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>81cfa7f1-b6db-45f5-bad2-a7eeb7a51dfc</tstamps>
+    </comp>
+    <comp ref="C107">
+      <value>100nF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>5deeca1d-ff19-46b7-84cc-2306bd38e1db</tstamps>
+    </comp>
+    <comp ref="C108">
+      <value>10uF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>02ede00d-8298-4b5d-bfa3-5d347aa60791</tstamps>
+    </comp>
+    <comp ref="D207">
+      <value>LED_Small</value>
+      <footprint>hermeslite:LED</footprint>
+      <libsource lib="hermeslite" part="LED_Small" description="LED, small symbol"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="LED, small symbol"/>
+      <property name="ki_keywords" value="led diode light-emitting-diode"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>7c15c3c3-cb26-4919-b026-c540c49ab8bb</tstamps>
+    </comp>
+    <comp ref="IC101">
+      <value>V-REG_LD117AS33TR</value>
+      <footprint>rb-eagle:V-REG_SOT223</footprint>
+      <libsource lib="Radioberry" part="V-REG_LD117AS33TR" description=""/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>9713dba7-7aaa-4242-8810-0569951e9c20</tstamps>
+    </comp>
+    <comp ref="IC102">
+      <value>V-REG_LD117AS50TR</value>
+      <footprint>rb-eagle:V-REG_SOT223</footprint>
+      <libsource lib="Radioberry" part="V-REG_LD117AS50TR" description=""/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>bfd52bf3-a823-4e54-8490-0b1ecbbaead7</tstamps>
+    </comp>
+    <comp ref="J101">
+      <value>+12V</value>
+      <footprint>hermeslite:2x1</footprint>
+      <libsource lib="hermeslite" part="CONN_01X02" description="Connector, single row, 01x02, pin header"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Connector, single row, 01x02, pin header"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>e3662a94-30f5-46fd-a51f-4ebf56ffacb6</tstamps>
+    </comp>
+    <comp ref="R101">
+      <value>680</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="PowerSupply"/>
+      <property name="Sheetfile" value="ps.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/PowerSupply/" tstamps="/e3864c17-e87a-4319-904c-310c875a2087/"/>
+      <tstamps>371d49fa-81ae-4f68-baef-d8cb2af7ff7d</tstamps>
+    </comp>
+    <comp ref="C201">
+      <value>100nF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>85a1de71-d055-473f-a933-a4b0b7b66fe1</tstamps>
+    </comp>
+    <comp ref="C202">
+      <value>100nF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>74f45fcb-6957-4c0c-a655-7d1c7741e32e</tstamps>
+    </comp>
+    <comp ref="C203">
+      <value>1uF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>52e582b4-2919-46aa-9fd0-1b22e7bfb33d</tstamps>
+    </comp>
+    <comp ref="C204">
+      <value>100nF</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>ba95aab3-cc73-410d-8043-79429976e11a</tstamps>
+    </comp>
+    <comp ref="C205">
+      <value>DNI</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <fields>
+        <field name="Key">C 100nF</field>
+        <field name="Option">NOPWMFAN</field>
+      </fields>
+      <libsource lib="hermeslite" part="C_Small" description="Unpolarized capacitor"/>
+      <property name="Option" value="NOPWMFAN"/>
+      <property name="Key" value="C 100nF"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="capacitor cap"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>2f87069d-41e6-4db8-9536-6fabc560b44b</tstamps>
+    </comp>
+    <comp ref="D201">
+      <value>DIODESCH</value>
+      <footprint>Diode_SMD:D_0805_2012Metric</footprint>
+      <libsource lib="hermeslite" part="DIODESCH" description="Diode schottky"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Diode schottky"/>
+      <property name="ki_keywords" value="DEV DIODE"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>ae922311-0825-47ad-98bd-3bf63938cdc8</tstamps>
+    </comp>
+    <comp ref="D202">
+      <value>DIODESCH</value>
+      <footprint>Diode_SMD:D_0805_2012Metric</footprint>
+      <libsource lib="hermeslite" part="DIODESCH" description="Diode schottky"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Diode schottky"/>
+      <property name="ki_keywords" value="DEV DIODE"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>90900293-70be-4ad5-9209-a71f9e8e8917</tstamps>
+    </comp>
+    <comp ref="D203">
+      <value>DIODESCH</value>
+      <footprint>Diode_SMD:D_0805_2012Metric</footprint>
+      <libsource lib="hermeslite" part="DIODESCH" description="Diode schottky"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Diode schottky"/>
+      <property name="ki_keywords" value="DEV DIODE"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>12b3c09b-745b-4444-b61f-e60875212a61</tstamps>
+    </comp>
+    <comp ref="D204">
+      <value>DIODESCH</value>
+      <footprint>Diode_SMD:D_0805_2012Metric</footprint>
+      <libsource lib="hermeslite" part="DIODESCH" description="Diode schottky"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Diode schottky"/>
+      <property name="ki_keywords" value="DEV DIODE"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>3351ac6d-3575-4c22-8324-958bf9834c2a</tstamps>
+    </comp>
+    <comp ref="D205">
+      <value>DIODESCH</value>
+      <footprint>Diode_SMD:D_0805_2012Metric</footprint>
+      <libsource lib="hermeslite" part="DIODESCH" description="Diode schottky"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Diode schottky"/>
+      <property name="ki_keywords" value="DEV DIODE"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>44839625-5d96-429c-9c9b-755959c00082</tstamps>
+    </comp>
+    <comp ref="D206">
+      <value>DIODESCH</value>
+      <footprint>Diode_SMD:D_0805_2012Metric</footprint>
+      <libsource lib="hermeslite" part="DIODESCH" description="Diode schottky"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Diode schottky"/>
+      <property name="ki_keywords" value="DEV DIODE"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>e929d8c0-5f2f-49be-bdb4-9734112f1db6</tstamps>
+    </comp>
+    <comp ref="J201">
+      <value>LPF</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x10" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>e4e77699-de15-4ec3-8854-7a82195bedec</tstamps>
+    </comp>
+    <comp ref="J202">
+      <value>TX</value>
+      <footprint>hermeslite:2x1</footprint>
+      <libsource lib="hermeslite" part="CONN_01X02" description="Connector, single row, 01x02, pin header"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Connector, single row, 01x02, pin header"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>8f4bad25-ee19-4e38-9074-d240a7067a27</tstamps>
+    </comp>
+    <comp ref="J203">
+      <value>Current</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>5e4c59ba-a320-49ae-a0b0-43ceeb45f0d7</tstamps>
+    </comp>
+    <comp ref="J204">
+      <value>Temp</value>
+      <footprint>hermeslite:4x1</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>b599be82-e32e-410f-bea1-c0674774cb46</tstamps>
+    </comp>
+    <comp ref="J205">
+      <value>BIAS</value>
+      <footprint>hermeslite:2x1</footprint>
+      <libsource lib="hermeslite" part="CONN_01X02" description="Connector, single row, 01x02, pin header"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Connector, single row, 01x02, pin header"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>79de1bea-e13c-43cf-a06e-98a12692d9f8</tstamps>
+    </comp>
+    <comp ref="J206">
+      <value>Voltage Check</value>
+      <footprint>hermeslite:2x1</footprint>
+      <libsource lib="hermeslite" part="CONN_01X02" description="Connector, single row, 01x02, pin header"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Connector, single row, 01x02, pin header"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>87008b94-3245-4d0f-ad60-43d04d6b0824</tstamps>
+    </comp>
+    <comp ref="J207">
+      <value>JNC</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="JNC" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R DEV"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>89cadc3d-0608-40cc-a422-ee4cbe133d35</tstamps>
+    </comp>
+    <comp ref="J208">
+      <value>JNC</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="JNC" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R DEV"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>4c37a913-d659-44e5-ad48-47c66c01b4d3</tstamps>
+    </comp>
+    <comp ref="J209">
+      <value>Ufwd</value>
+      <footprint>hermeslite:2x1</footprint>
+      <libsource lib="hermeslite" part="CONN_01X02" description="Connector, single row, 01x02, pin header"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Connector, single row, 01x02, pin header"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>c165baa7-455a-42c6-b0e8-e6527ac460ae</tstamps>
+    </comp>
+    <comp ref="J210">
+      <value>Fan</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>27408563-91be-4673-bad1-e9e59c7844b4</tstamps>
+    </comp>
+    <comp ref="J211">
+      <value>DNI</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <fields>
+        <field name="Key ">R 0</field>
+        <field name="Option">NOPWMFAN</field>
+      </fields>
+      <libsource lib="hermeslite" part="JNO" description="Resistor"/>
+      <property name="Option" value="NOPWMFAN"/>
+      <property name="Key " value="R 0"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R DEV"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>8e8922b5-ac18-401c-a93e-01e9e9acf0ec</tstamps>
+    </comp>
+    <comp ref="J212">
+      <value>Urev</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="hermeslite" part="CONN_01X02" description="Connector, single row, 01x02, pin header"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Connector, single row, 01x02, pin header"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>ab154fe9-a952-4cc5-b62e-8f7e56002e59</tstamps>
+    </comp>
+    <comp ref="Q201">
+      <value>MOSFET_N</value>
+      <footprint>hermeslite:SOT23_3</footprint>
+      <libsource lib="hermeslite" part="MOSFET_N" description=""/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>53ee68f7-da70-471e-8840-493828b56c55</tstamps>
+    </comp>
+    <comp ref="Q202">
+      <value>MOSFET_N</value>
+      <footprint>hermeslite:SOT23_3</footprint>
+      <libsource lib="hermeslite" part="MOSFET_N" description=""/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>3c2369eb-068c-4d0a-b625-9f0e7520b5b0</tstamps>
+    </comp>
+    <comp ref="Q203">
+      <value>DNI</value>
+      <footprint>hermeslite:SOT23_3</footprint>
+      <fields>
+        <field name="Key ">P-Channel Mosfet</field>
+        <field name="Option">NOPWMFAN</field>
+      </fields>
+      <libsource lib="hermeslite" part="MOSFET_P" description=""/>
+      <property name="Option" value="NOPWMFAN"/>
+      <property name="Key " value="P-Channel Mosfet"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>626d3346-53ac-48e4-8c3b-f876fa6db4c1</tstamps>
+    </comp>
+    <comp ref="Q204">
+      <value>DNI</value>
+      <footprint>hermeslite:SOT23_3</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/BC550-D.pdf</datasheet>
+      <fields>
+        <field name="Key">BC547</field>
+        <field name="Option">NOPWMFAN</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="BC547" description="0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"/>
+      <property name="Option" value="NOPWMFAN"/>
+      <property name="Key" value="BC547"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"/>
+      <property name="ki_keywords" value="NPN Transistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>9493b01d-2a01-4369-b780-4d3db8da147b</tstamps>
+    </comp>
+    <comp ref="R201">
+      <value>10K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>2f097e19-4426-4f0b-a727-5e2d86b46d4e</tstamps>
+    </comp>
+    <comp ref="R202">
+      <value>4.7K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>25361fcc-c758-4696-b23c-2bf2f9b2dbf0</tstamps>
+    </comp>
+    <comp ref="R203">
+      <value>10K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>c46cb930-435f-4ca4-acb1-8e05c423240e</tstamps>
+    </comp>
+    <comp ref="R204">
+      <value>4.7K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>38c06db1-0721-4df0-97ec-63c0815a2fd4</tstamps>
+    </comp>
+    <comp ref="R205">
+      <value>330K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>075e00ef-66cb-420c-951e-ab0512fa5141</tstamps>
+    </comp>
+    <comp ref="R206">
+      <value>1K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>a7a1383e-3810-4965-a04d-c4c5d7b1c3ce</tstamps>
+    </comp>
+    <comp ref="R207">
+      <value>10K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>14b1732f-5309-44de-aabc-002bdfbb3c10</tstamps>
+    </comp>
+    <comp ref="R208">
+      <value>20K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>cc8dc693-0503-4338-a6ce-26003ad9f1b9</tstamps>
+    </comp>
+    <comp ref="R209">
+      <value>10K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>a9b74315-499c-486c-b944-e8a8d96c27c2</tstamps>
+    </comp>
+    <comp ref="R210">
+      <value>DNI</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <fields>
+        <field name="Key">R 10K</field>
+        <field name="Option">NOPWMFAN</field>
+      </fields>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Option" value="NOPWMFAN"/>
+      <property name="Key" value="R 10K"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>a1d9a745-da48-4720-ac3a-d095b92d007e</tstamps>
+    </comp>
+    <comp ref="R211">
+      <value>DNI</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <fields>
+        <field name="Key">R 10K</field>
+        <field name="Option">NOPWMFAN</field>
+      </fields>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Option" value="NOPWMFAN"/>
+      <property name="Key" value="R 10K"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>51ffb255-28ef-48a2-9e1a-65f2aaaa0232</tstamps>
+    </comp>
+    <comp ref="R212">
+      <value>DNI</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <fields>
+        <field name="Key">R 4.7K</field>
+        <field name="Option">NOPWMFAN</field>
+      </fields>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Option" value="NOPWMFAN"/>
+      <property name="Key" value="R 4.7K"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>369849a5-4cc2-48db-8164-2a9f75d4d8ec</tstamps>
+    </comp>
+    <comp ref="R213">
+      <value>20K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>88edb5bf-0b9f-4662-b07c-5b5fed0a0094</tstamps>
+    </comp>
+    <comp ref="R214">
+      <value>10K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>f1e65039-c43c-4e37-95be-7291afb06407</tstamps>
+    </comp>
+    <comp ref="R215">
+      <value>4.7K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>764cc6db-b56d-43cb-b60b-89c4e39b2898</tstamps>
+    </comp>
+    <comp ref="R216">
+      <value>4.7K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>7de6963e-66a9-4594-9a28-6cdd47cbad63</tstamps>
+    </comp>
+    <comp ref="R217">
+      <value>4.7K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>e6ae2663-caae-4fd8-8637-8ce4ecc68d27</tstamps>
+    </comp>
+    <comp ref="R218">
+      <value>4.7K</value>
+      <footprint>hermeslite:SMD-0805</footprint>
+      <libsource lib="hermeslite" part="R" description="Resistor"/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="r res resistor"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>51a82b6e-74eb-43f7-9e15-9cd1a255ec0c</tstamps>
+    </comp>
+    <comp ref="U201">
+      <value>ULN2803</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>DOCUMENTATION</datasheet>
+      <libsource lib="hermeslite" part="ULN2803" description=""/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>62a7f0da-2b8d-4560-87ab-9027e6941ca6</tstamps>
+    </comp>
+    <comp ref="U202">
+      <value>MCP23008-E_SS</value>
+      <footprint>Package_SO:SOIC-20W_7.5x15.4mm_P1.27mm</footprint>
+      <libsource lib="hermeslite" part="MCP23008-E_SS" description=""/>
+      <property name="Sheetname" value="IN-OUT"/>
+      <property name="Sheetfile" value="inout.kicad_sch"/>
+      <sheetpath names="/IN-OUT/" tstamps="/299665e5-0d14-40cc-836b-21b8449689ad/"/>
+      <tstamps>2334900f-af16-4ede-9ad4-c0bd5eba7131</tstamps>
+    </comp>
+    <comp ref="IC301">
+      <value>LM4040DIM3X-3.0_NOPB</value>
+      <footprint>LM4040DIM3X:SOT95P237X112-3N</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/lm4040-n</datasheet>
+      <fields>
+        <field name="Description">100-ppm/C precision micropower shunt voltage reference</field>
+        <field name="Height">1.12</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">LM4040DIM3X-3.0/NOPB</field>
+        <field name="Mouser Part Number">926-LM4040DIM3X30NPB</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM4040DIM3X-3.0-NOPB?qs=QbsRYf82W3EJapBFa1oAWg%3D%3D</field>
+      </fields>
+      <libsource lib="LM4040DIM3X-3.0_NOPB" part="LM4040DIM3X-3.0_NOPB" description="100-ppm/C precision micropower shunt voltage reference"/>
+      <property name="Description" value="100-ppm/C precision micropower shunt voltage reference"/>
+      <property name="Height" value="1.12"/>
+      <property name="Mouser Part Number" value="926-LM4040DIM3X30NPB"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM4040DIM3X-3.0-NOPB?qs=QbsRYf82W3EJapBFa1oAWg%3D%3D"/>
+      <property name="Manufacturer_Name" value="Texas Instruments"/>
+      <property name="Manufacturer_Part_Number" value="LM4040DIM3X-3.0/NOPB"/>
+      <property name="Sheetname" value="controller Sheet"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="ki_description" value="100-ppm/C precision micropower shunt voltage reference"/>
+      <sheetpath names="/controller Sheet/" tstamps="/b90c7895-f645-4703-bf81-ae17c985b58b/"/>
+      <tstamps>7ea78c97-a4eb-4fb4-a2e0-3583796a3b59</tstamps>
+    </comp>
+    <comp ref="J301">
+      <value>Eth</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x07_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x07_Odd_Even" description="Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="controller Sheet"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/controller Sheet/" tstamps="/b90c7895-f645-4703-bf81-ae17c985b58b/"/>
+      <tstamps>a92bedeb-830e-4bb0-8ac0-26cc38689399</tstamps>
+    </comp>
+    <comp ref="U301">
+      <value>Pico</value>
+      <footprint>MCU_RaspberryPi_and_Boards:RPi_Pico_SMD_TH</footprint>
+      <libsource lib="MCU_RaspberryPi_and_Boards" part="Pico" description=""/>
+      <property name="Sheetname" value="controller Sheet"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/controller Sheet/" tstamps="/b90c7895-f645-4703-bf81-ae17c985b58b/"/>
+      <tstamps>c67fe1c4-1994-4bb0-9fbe-285ac52a3282</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x10">
+      <description>Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x10</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x07_Odd_Even">
+      <description>Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x07_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LM4040DIM3X-3.0_NOPB" part="LM4040DIM3X-3.0_NOPB">
+      <description>100-ppm/C precision micropower shunt voltage reference</description>
+      <docs>http://www.ti.com/lit/gpn/lm4040-n</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">LM4040DIM3X-3.0_NOPB</field>
+        <field name="Footprint">SOT95P237X112-3N</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/lm4040-n</field>
+        <field name="Description">100-ppm/C precision micropower shunt voltage reference</field>
+        <field name="Height">1.12</field>
+        <field name="Mouser Part Number">926-LM4040DIM3X30NPB</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM4040DIM3X-3.0-NOPB?qs=QbsRYf82W3EJapBFa1oAWg%3D%3D</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">LM4040DIM3X-3.0/NOPB</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CATHODE" type="passive"/>
+        <pin num="2" name="ANODE" type="passive"/>
+        <pin num="3" name="NC" type="no_connect"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_RaspberryPi_and_Boards" part="Pico">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Pico</field>
+        <field name="Footprint">RPi_Pico:RPi_Pico_SMD_TH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GPIO0" type="bidirectional"/>
+        <pin num="2" name="GPIO1" type="bidirectional"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="GPIO2" type="bidirectional"/>
+        <pin num="5" name="GPIO3" type="bidirectional"/>
+        <pin num="6" name="GPIO4" type="bidirectional"/>
+        <pin num="7" name="GPIO5" type="bidirectional"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="GPIO6" type="bidirectional"/>
+        <pin num="10" name="GPIO7" type="bidirectional"/>
+        <pin num="11" name="GPIO8" type="bidirectional"/>
+        <pin num="12" name="GPIO9" type="bidirectional"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="GPIO10" type="bidirectional"/>
+        <pin num="15" name="GPIO11" type="bidirectional"/>
+        <pin num="16" name="GPIO12" type="bidirectional"/>
+        <pin num="17" name="GPIO13" type="bidirectional"/>
+        <pin num="18" name="GND" type="power_in"/>
+        <pin num="19" name="GPIO14" type="bidirectional"/>
+        <pin num="20" name="GPIO15" type="bidirectional"/>
+        <pin num="21" name="GPIO16" type="bidirectional"/>
+        <pin num="22" name="GPIO17" type="bidirectional"/>
+        <pin num="23" name="GND" type="power_in"/>
+        <pin num="24" name="GPIO18" type="bidirectional"/>
+        <pin num="25" name="GPIO19" type="bidirectional"/>
+        <pin num="26" name="GPIO20" type="bidirectional"/>
+        <pin num="27" name="GPIO21" type="bidirectional"/>
+        <pin num="28" name="GND" type="power_in"/>
+        <pin num="29" name="GPIO22" type="bidirectional"/>
+        <pin num="30" name="RUN" type="input"/>
+        <pin num="31" name="GPIO26_ADC0" type="bidirectional"/>
+        <pin num="32" name="GPIO27_ADC1" type="bidirectional"/>
+        <pin num="33" name="AGND" type="power_in"/>
+        <pin num="34" name="GPIO28_ADC2" type="bidirectional"/>
+        <pin num="35" name="ADC_VREF" type="power_in"/>
+        <pin num="36" name="3V3" type="power_in"/>
+        <pin num="37" name="3V3_EN" type="input"/>
+        <pin num="38" name="GND" type="bidirectional"/>
+        <pin num="39" name="VSYS" type="power_in"/>
+        <pin num="40" name="VBUS" type="power_in"/>
+        <pin num="41" name="SWCLK" type="input"/>
+        <pin num="42" name="GND" type="power_in"/>
+        <pin num="43" name="SWDIO" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Radioberry" part="V-REG_LD117AS33TR">
+      <footprints>
+        <fp>*V-REG_SOT223*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">V-REG_LD117AS33TR</field>
+        <field name="Footprint">V-REG_SOT223</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ADJ" type="input"/>
+        <pin num="3" name="IN" type="input"/>
+        <pin num="4" name="OUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Radioberry" part="V-REG_LD117AS50TR">
+      <footprints>
+        <fp>*V-REG_SOT223*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">V-REG_LD117AS50TR</field>
+        <field name="Footprint">V-REG_SOT223</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ADJ" type="input"/>
+        <pin num="3" name="IN" type="input"/>
+        <pin num="4" name="OUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BC547">
+      <description>0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92</description>
+      <docs>https://www.onsemi.com/pub/Collateral/BC550-D.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC547</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/BC550-D.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="C" type="passive"/>
+        <pin num="2" name="B" type="input"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="CONN_01X02">
+      <description>Connector, single row, 01x02, pin header</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="C_Small">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="DIODESCH">
+      <description>Diode schottky</description>
+      <footprints>
+        <fp>D?</fp>
+        <fp>S*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DIODESCH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="JNC">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">JNC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="JNO">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">JNO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="LED_Small">
+      <description>LED, small symbol</description>
+      <footprints>
+        <fp>LED-*</fp>
+        <fp>LED_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="MCP23008-E_SS">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP23008-E_SS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCL" type="input"/>
+        <pin num="2" name="SDA" type="bidirectional"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="A1" type="input"/>
+        <pin num="5" name="A0" type="input"/>
+        <pin num="6" name="Rst/" type="input"/>
+        <pin num="7" name="NC" type="no_connect"/>
+        <pin num="8" name="INT" type="output"/>
+        <pin num="9" name="Vss" type="passive"/>
+        <pin num="10" name="NC" type="no_connect"/>
+        <pin num="11" name="NC" type="no_connect"/>
+        <pin num="12" name="GP0" type="output"/>
+        <pin num="13" name="GP1" type="output"/>
+        <pin num="14" name="GP2" type="output"/>
+        <pin num="15" name="GP3" type="output"/>
+        <pin num="16" name="GP4" type="output"/>
+        <pin num="17" name="GP5" type="output"/>
+        <pin num="18" name="GP6" type="output"/>
+        <pin num="19" name="GP7" type="output"/>
+        <pin num="20" name="Vdd" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="MOSFET_N">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MOSFET_N</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="MOSFET_P">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MOSFET_P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="TEST_1P">
+      <description>point</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">TEST_1P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="hermeslite" part="ULN2803">
+      <docs>DOCUMENTATION</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ULN2803</field>
+        <field name="Footprint">MODULE</field>
+        <field name="Datasheet">DOCUMENTATION</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I1" type="input"/>
+        <pin num="2" name="I2" type="input"/>
+        <pin num="3" name="I3" type="input"/>
+        <pin num="4" name="I4" type="input"/>
+        <pin num="5" name="I5" type="input"/>
+        <pin num="6" name="I6" type="input"/>
+        <pin num="7" name="I7" type="input"/>
+        <pin num="8" name="I8" type="input"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="COM" type="power_in"/>
+        <pin num="11" name="O8" type="output"/>
+        <pin num="12" name="O7" type="output"/>
+        <pin num="13" name="O6" type="output"/>
+        <pin num="14" name="O5" type="output"/>
+        <pin num="15" name="O4" type="output"/>
+        <pin num="16" name="O3" type="output"/>
+        <pin num="17" name="O2" type="output"/>
+        <pin num="18" name="O1" type="output"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="LM4040DIM3X-3.0_NOPB">
+      <uri>C:\dev\git\RB2AMPController/libs/LM4040DIM3X/LM4040DIM3X-3.0_NOPB.lib</uri>
+    </library>
+    <library logical="MCU_RaspberryPi_and_Boards">
+      <uri>C:/dev/git/KiCad-RP-Pico/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.kicad_sym</uri>
+    </library>
+    <library logical="Radioberry">
+      <uri>C:\dev\git\RB2AMPController/libs/Radioberry.lib</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Transistor_BJT.kicad_sym</uri>
+    </library>
+    <library logical="hermeslite">
+      <uri>C:\dev\git\RB2AMPController/libs/hermeslite.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C202" pin="1" pintype="passive"/>
+      <node ref="C204" pin="2" pintype="passive"/>
+      <node ref="D201" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="D203" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="D205" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="IC101" pin="4" pinfunction="OUT" pintype="passive"/>
+      <node ref="J203" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J204" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J301" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J301" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R215" pin="2" pintype="passive"/>
+      <node ref="R216" pin="2" pintype="passive"/>
+      <node ref="R217" pin="2" pintype="passive"/>
+      <node ref="R218" pin="2" pintype="passive"/>
+      <node ref="U202" pin="20" pinfunction="Vdd" pintype="power_in"/>
+      <node ref="U202" pin="6" pinfunction="Rst/" pintype="input"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="C107" pin="1" pintype="passive"/>
+      <node ref="C108" pin="1" pintype="passive"/>
+      <node ref="IC101" pin="3" pinfunction="IN" pintype="input"/>
+      <node ref="IC102" pin="4" pinfunction="OUT" pintype="passive"/>
+      <node ref="U301" pin="40" pinfunction="VBUS" pintype="power_in"/>
+    </net>
+    <net code="3" name="+12V">
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="C201" pin="2" pintype="passive"/>
+      <node ref="IC102" pin="3" pinfunction="IN" pintype="input"/>
+      <node ref="J101" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="J201" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J208" pin="1" pintype="passive"/>
+      <node ref="Q203" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+      <node ref="R201" pin="2" pintype="passive"/>
+      <node ref="R203" pin="2" pintype="passive"/>
+      <node ref="R210" pin="1" pintype="passive"/>
+      <node ref="U201" pin="10" pinfunction="COM" pintype="power_in"/>
+    </net>
+    <net code="4" name="BIAS">
+      <node ref="Q202" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R204" pin="2" pintype="passive"/>
+      <node ref="U301" pin="21" pinfunction="GPIO16" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="CRS">
+      <node ref="J301" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="U301" pin="11" pinfunction="GPIO8" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="Current">
+      <node ref="J203" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U301" pin="34" pinfunction="GPIO28_ADC2" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="FAN_PWM">
+      <node ref="J207" pin="1" pintype="passive"/>
+      <node ref="R212" pin="2" pintype="passive"/>
+      <node ref="U301" pin="2" pinfunction="GPIO1" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="GND">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="C107" pin="2" pintype="passive"/>
+      <node ref="C108" pin="2" pintype="passive"/>
+      <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="C203" pin="1" pintype="passive"/>
+      <node ref="C204" pin="1" pintype="passive"/>
+      <node ref="C205" pin="2" pintype="passive"/>
+      <node ref="D202" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D204" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D206" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D207" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC101" pin="1" pinfunction="ADJ" pintype="input"/>
+      <node ref="IC102" pin="1" pinfunction="ADJ" pintype="input"/>
+      <node ref="IC301" pin="2" pinfunction="ANODE" pintype="passive"/>
+      <node ref="J101" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="J201" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J202" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="J203" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J204" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J205" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="J206" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="J209" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="J210" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J212" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="J301" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J301" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="MH1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="MH2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="MH3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="MH4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="Q201" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q202" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q204" pin="3" pinfunction="E" pintype="passive"/>
+      <node ref="R202" pin="1" pintype="passive"/>
+      <node ref="R204" pin="1" pintype="passive"/>
+      <node ref="R207" pin="1" pintype="passive"/>
+      <node ref="R209" pin="2" pintype="passive"/>
+      <node ref="R210" pin="2" pintype="passive"/>
+      <node ref="R214" pin="2" pintype="passive"/>
+      <node ref="U201" pin="9" pinfunction="GND" pintype="power_in"/>
+      <node ref="U202" pin="3" pinfunction="A2" pintype="input"/>
+      <node ref="U202" pin="4" pinfunction="A1" pintype="input"/>
+      <node ref="U202" pin="5" pinfunction="A0" pintype="input"/>
+      <node ref="U202" pin="9" pinfunction="Vss" pintype="passive"/>
+      <node ref="U301" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="U301" pin="18" pinfunction="GND" pintype="power_in"/>
+      <node ref="U301" pin="23" pinfunction="GND" pintype="power_in"/>
+      <node ref="U301" pin="28" pinfunction="GND" pintype="power_in"/>
+      <node ref="U301" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U301" pin="33" pinfunction="AGND" pintype="power_in"/>
+      <node ref="U301" pin="38" pinfunction="GND" pintype="bidirectional"/>
+      <node ref="U301" pin="42" pinfunction="GND" pintype="power_in"/>
+      <node ref="U301" pin="8" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="9" name="I2C0 SCK">
+      <node ref="J204" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R215" pin="1" pintype="passive"/>
+      <node ref="U301" pin="7" pinfunction="GPIO5" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="I2C0 SDA">
+      <node ref="J204" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R216" pin="1" pintype="passive"/>
+      <node ref="U301" pin="6" pinfunction="GPIO4" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="I2C1 SCK">
+      <node ref="R217" pin="1" pintype="passive"/>
+      <node ref="U202" pin="1" pinfunction="SCL" pintype="input"/>
+      <node ref="U301" pin="5" pinfunction="GPIO3" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="I2C1 SDA">
+      <node ref="R218" pin="1" pintype="passive"/>
+      <node ref="U202" pin="2" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U301" pin="4" pinfunction="GPIO2" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="MDC">
+      <node ref="J301" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U301" pin="20" pinfunction="GPIO15" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="MDIO">
+      <node ref="J301" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U301" pin="19" pinfunction="GPIO14" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="Net-(D207-A)">
+      <node ref="D207" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R101" pin="2" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(IC301-CATHODE)">
+      <node ref="IC301" pin="1" pinfunction="CATHODE" pintype="passive"/>
+      <node ref="U301" pin="35" pinfunction="ADC_VREF" pintype="power_in"/>
+    </net>
+    <net code="17" name="Net-(J201-Pin_2)">
+      <node ref="J201" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U201" pin="18" pinfunction="O1" pintype="output"/>
+    </net>
+    <net code="18" name="Net-(J201-Pin_3)">
+      <node ref="J201" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U201" pin="17" pinfunction="O2" pintype="output"/>
+    </net>
+    <net code="19" name="Net-(J201-Pin_4)">
+      <node ref="J201" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U201" pin="16" pinfunction="O3" pintype="output"/>
+    </net>
+    <net code="20" name="Net-(J201-Pin_5)">
+      <node ref="J201" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U201" pin="15" pinfunction="O4" pintype="output"/>
+    </net>
+    <net code="21" name="Net-(J201-Pin_6)">
+      <node ref="J201" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U201" pin="14" pinfunction="O5" pintype="output"/>
+    </net>
+    <net code="22" name="Net-(J201-Pin_7)">
+      <node ref="J201" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="U201" pin="13" pinfunction="O6" pintype="output"/>
+    </net>
+    <net code="23" name="Net-(J201-Pin_8)">
+      <node ref="J201" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U201" pin="12" pinfunction="O7" pintype="output"/>
+    </net>
+    <net code="24" name="Net-(J201-Pin_9)">
+      <node ref="J201" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="U201" pin="11" pinfunction="O8" pintype="output"/>
+    </net>
+    <net code="25" name="Net-(J202-P2)">
+      <node ref="J202" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="Q201" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R201" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(J205-P2)">
+      <node ref="J205" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="Q202" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R203" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(J206-P2)">
+      <node ref="J206" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="R205" pin="1" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(J209-P2)">
+      <node ref="J209" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="R208" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(J210-Pin_2)">
+      <node ref="J208" pin="2" pintype="passive"/>
+      <node ref="J210" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J211" pin="1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(J210-Pin_3)">
+      <node ref="J207" pin="2" pintype="passive"/>
+      <node ref="J210" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(J212-P2)">
+      <node ref="J212" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="R213" pin="1" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(Q203-G)">
+      <node ref="Q203" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="Q204" pin="1" pinfunction="C" pintype="passive"/>
+      <node ref="R211" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(Q203-S)">
+      <node ref="J211" pin="2" pintype="passive"/>
+      <node ref="Q203" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R211" pin="1" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(Q204-B)">
+      <node ref="C205" pin="1" pintype="passive"/>
+      <node ref="Q204" pin="2" pinfunction="B" pintype="input"/>
+      <node ref="R212" pin="1" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(R205-Pad2)">
+      <node ref="R205" pin="2" pintype="passive"/>
+      <node ref="R206" pin="1" pintype="passive"/>
+      <node ref="R207" pin="2" pintype="passive"/>
+    </net>
+    <net code="36" name="Net-(U201-I1)">
+      <node ref="U201" pin="1" pinfunction="I1" pintype="input"/>
+      <node ref="U202" pin="19" pinfunction="GP7" pintype="output"/>
+    </net>
+    <net code="37" name="Net-(U201-I2)">
+      <node ref="U201" pin="2" pinfunction="I2" pintype="input"/>
+      <node ref="U202" pin="18" pinfunction="GP6" pintype="output"/>
+    </net>
+    <net code="38" name="Net-(U201-I3)">
+      <node ref="U201" pin="3" pinfunction="I3" pintype="input"/>
+      <node ref="U202" pin="17" pinfunction="GP5" pintype="output"/>
+    </net>
+    <net code="39" name="Net-(U201-I4)">
+      <node ref="U201" pin="4" pinfunction="I4" pintype="input"/>
+      <node ref="U202" pin="16" pinfunction="GP4" pintype="output"/>
+    </net>
+    <net code="40" name="Net-(U201-I5)">
+      <node ref="U201" pin="5" pinfunction="I5" pintype="input"/>
+      <node ref="U202" pin="15" pinfunction="GP3" pintype="output"/>
+    </net>
+    <net code="41" name="Net-(U201-I6)">
+      <node ref="U201" pin="6" pinfunction="I6" pintype="input"/>
+      <node ref="U202" pin="14" pinfunction="GP2" pintype="output"/>
+    </net>
+    <net code="42" name="Net-(U201-I7)">
+      <node ref="U201" pin="7" pinfunction="I7" pintype="input"/>
+      <node ref="U202" pin="13" pinfunction="GP1" pintype="output"/>
+    </net>
+    <net code="43" name="Net-(U201-I8)">
+      <node ref="U201" pin="8" pinfunction="I8" pintype="input"/>
+      <node ref="U202" pin="12" pinfunction="GP0" pintype="output"/>
+    </net>
+    <net code="44" name="RXCLK">
+      <node ref="J301" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U301" pin="26" pinfunction="GPIO20" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="RXD0">
+      <node ref="J301" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="U301" pin="9" pinfunction="GPIO6" pintype="bidirectional"/>
+    </net>
+    <net code="46" name="RXD1">
+      <node ref="J301" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="U301" pin="10" pinfunction="GPIO7" pintype="bidirectional"/>
+    </net>
+    <net code="47" name="TX">
+      <node ref="Q201" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+      <node ref="U301" pin="22" pinfunction="GPIO17" pintype="bidirectional"/>
+    </net>
+    <net code="48" name="TXD0">
+      <node ref="J301" pin="11" pinfunction="Pin_11" pintype="passive"/>
+      <node ref="U301" pin="14" pinfunction="GPIO10" pintype="bidirectional"/>
+    </net>
+    <net code="49" name="TXD1">
+      <node ref="J301" pin="14" pinfunction="Pin_14" pintype="passive"/>
+      <node ref="U301" pin="15" pinfunction="GPIO11" pintype="bidirectional"/>
+    </net>
+    <net code="50" name="TX_EN">
+      <node ref="J301" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="U301" pin="16" pinfunction="GPIO12" pintype="bidirectional"/>
+    </net>
+    <net code="51" name="UFWD">
+      <node ref="D203" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D204" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="R208" pin="2" pintype="passive"/>
+      <node ref="R209" pin="1" pintype="passive"/>
+      <node ref="U301" pin="31" pinfunction="GPIO26_ADC0" pintype="bidirectional"/>
+    </net>
+    <net code="52" name="Urev">
+      <node ref="D205" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D206" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="R213" pin="2" pintype="passive"/>
+      <node ref="R214" pin="1" pintype="passive"/>
+      <node ref="U301" pin="32" pinfunction="GPIO27_ADC1" pintype="bidirectional"/>
+    </net>
+    <net code="53" name="VoltCheck">
+      <node ref="C203" pin="2" pintype="passive"/>
+      <node ref="D201" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D202" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="R206" pin="2" pintype="passive"/>
+      <node ref="U301" pin="25" pinfunction="GPIO19" pintype="bidirectional"/>
+    </net>
+    <net code="54" name="unconnected-(IC301-NC-Pad3)">
+      <node ref="IC301" pin="3" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(J301-Pin_13-Pad13)">
+      <node ref="J301" pin="13" pinfunction="Pin_13" pintype="passive+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U202-INT-Pad8)">
+      <node ref="U202" pin="8" pinfunction="INT" pintype="output+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U202-NC-Pad7)">
+      <node ref="U202" pin="7" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U202-NC-Pad10)">
+      <node ref="U202" pin="10" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U202-NC-Pad11)">
+      <node ref="U202" pin="11" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U301-3V3-Pad36)">
+      <node ref="U301" pin="36" pinfunction="3V3" pintype="power_in"/>
+    </net>
+    <net code="61" name="unconnected-(U301-3V3_EN-Pad37)">
+      <node ref="U301" pin="37" pinfunction="3V3_EN" pintype="input"/>
+    </net>
+    <net code="62" name="unconnected-(U301-GPIO0-Pad1)">
+      <node ref="U301" pin="1" pinfunction="GPIO0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U301-GPIO9-Pad12)">
+      <node ref="U301" pin="12" pinfunction="GPIO9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U301-GPIO13-Pad17)">
+      <node ref="U301" pin="17" pinfunction="GPIO13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U301-GPIO18-Pad24)">
+      <node ref="U301" pin="24" pinfunction="GPIO18" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U301-GPIO21-Pad27)">
+      <node ref="U301" pin="27" pinfunction="GPIO21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U301-GPIO22-Pad29)">
+      <node ref="U301" pin="29" pinfunction="GPIO22" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U301-RUN-Pad30)">
+      <node ref="U301" pin="30" pinfunction="RUN" pintype="input"/>
+    </net>
+    <net code="69" name="unconnected-(U301-SWCLK-Pad41)">
+      <node ref="U301" pin="41" pinfunction="SWCLK" pintype="input"/>
+    </net>
+    <net code="70" name="unconnected-(U301-SWDIO-Pad43)">
+      <node ref="U301" pin="43" pinfunction="SWDIO" pintype="bidirectional"/>
+    </net>
+    <net code="71" name="unconnected-(U301-VSYS-Pad39)">
+      <node ref="U301" pin="39" pinfunction="VSYS" pintype="power_in"/>
+    </net>
+  </nets>
+</export>

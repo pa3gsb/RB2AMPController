@@ -1,0 +1,8 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "hermeslite")(type "KiCad")(uri "${KIPRJMOD}/libs/hermeslite.pretty")(options "")(descr ""))
+  (lib (name "radioberry")(type "KiCad")(uri "${KIPRJMOD}/libs/radioberry.pretty")(options "")(descr ""))
+  (lib (name "LM4040DIM3X")(type "KiCad")(uri "${KIPRJMOD}/libs/LM4040DIM3X")(options "")(descr ""))
+  (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${KIPRJMOD}/libs/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.pretty")(options "")(descr ""))
+  (lib (name "rb-eagle")(type "Eagle")(uri "${KIPRJMOD}/libs/Radioberry.lbr")(options "")(descr ""))
+)

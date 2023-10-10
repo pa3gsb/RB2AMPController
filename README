@@ -1,0 +1,64 @@
+# Radioberry AMP Controller Board by PA3GSB
+
+RB2AMPController (Radioberry V2.0 Amplifier Controller)
+
+The board contains an ethernet module and a Raspberry Pi Pico (RP2040) module which implemets a TCPIP server.
+
+The radioberry firmware talks to the controller server using a TCPIP client.
+
+The information in the openhpsdr protocol-1 is used to control the amplifier. So if you change the frequency in your favourite SDR program the LPF filter
+in the AMP will be set. Also when going into transmit; the AMP will make use of a sequencer and will switch the relais in the right order.
+
+Information of the AMP will be placed into the protocol and will be presented in the SDR program user interface to the operator.
+Information here is the temperature of the AMP, the forward and reverse power.
+
+
+This controller board supports works for now only with the radioberry juice board.
+
+## RB2AMPController-Protocol
+
+REQUEST (to server / AMP Controller)
+
+indentification 4bytes:	0x00 0x00 0xef 0xfe 
+byte 5:  	off 	0x00 
+			standby 0x0f  
+			active  0xff  
+byte 6:  	PTT  	0x00 	PA off.
+					0xFF  	PA on.
+byte 7:  	lpf  	0x00 	no LPF filter.
+					0x01 	160m
+					0x02 	80m
+					0x03 	60m
+					0x04	40m
+					0x05	20m
+					0x06	10m
+				
+Total 20 bytes (so some spare bytes)
+
+
+RESPONSE (from server / AMP Controller)
+
+identification 	4bytes:	0x00 0x00 0xef 0xfe
+byte 5:			versie pa firmware  (1/10 => 0.1)  divide by 10.
+byte 6, 7		temp
+byte 8, 9		forwrd pwr
+byte 10,11		reverse pwr
+byte 12,13		u   (not implemented) 
+byte 14,15		i	(not implemented) 
+byte 20			error  
+
+Total 20 bytes (so some spare bytes)
+
+## Firmware of the RB2AMPController
+The RPI pico board contains a microcontroller which need a firmware.
+
+For loading this firmware you need to connect a USB cable to the board.
+Push the button on the Pico and then plug the USB cable into your PC.
+The Pico will appear as a flash drive on the PC. Then copy the file xxx.uf2 to the Pico. 
+
+The Pico will reboot and the Pico LED will flash slowly.
+
+### adding descriptions per port.
+
+### Fan Control
+PWM controlled FAN
