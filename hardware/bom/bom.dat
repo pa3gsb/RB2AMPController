@@ -5,7 +5,7 @@
   & Schottky-diodes & \href{http://www.octopart.com/search?q=BAT43W-G3-08}{BAT43W-G3-08} & Y & D201,D202,D203,D204, D205,D206 & 0805 & 2 & 6 \\ \hline
   & LED RA & \href{http://www.octopart.com/search?q=LTST-S220KFKT}{LTST-S220KFKT} & N & D207 & 2.1x1.0mmRightAngle & 2 & 1 \\ \hline
   & IC REG LINEAR 3.3V 800MA & \href{http://www.octopart.com/search?q=LD1117S33TR}{LD1117S33TR} & Y & IC101 & SOT223 & 4 & 1 \\ \hline
-  & LDO-spanningregelaars 5.0V 0.8A Positive & \href{http://www.octopart.com/search?q=LD1117S50C-TR}{LD1117S50C-TR} & Y & IC102 & Custom & 2 & 1 \\ \hline
+  & LDO-spanningregelaars 5.0V 0.8A Positive & \href{http://www.octopart.com/search?q=NCP1117LPST50T3G, TS 1117 CW50}{NCP1117LPST50T3G, TS 1117 CW50} & N & IC102 & SOT223 & 4 & 1 \\ \hline
   & 100-ppm/ C precision micropower shunt voltage reference  & \href{http://www.octopart.com/search?q=LM4040DIM3X-3.0/NOPB}{LM4040DIM3X-3.0/NOPB} & Y & IC301 & Custom & 3 & 1 \\ \hline
   & CONN HEADER VERT 2POS 2.54MM Würth Elektronik & \href{http://www.octopart.com/search?q=61300211121}{61300211121} & Y & J101 & Custom & 2 & 1 \\ \hline
   & CONN HEADER VERT 10POS 2.54MM Würth Elektronik & \href{http://www.octopart.com/search?q=TMS-110-01-L-S-RA}{TMS-110-01-L-S-RA} & Y & J201 & Custom & 10 & 1 \\ \hline
@@ -26,6 +26,6 @@
   & 330K 0805$\leq$1\%$\geq$2/10W & \href{http://www.octopart.com/search?q=71-71-TNPW0805330KBEEN}{71-71-TNPW0805330KBEEN} & Y & R205 & 0805 & 2 & 1 \\ \hline
   & 1K 0805$\leq$5\%$\geq$1/10W & \href{http://www.octopart.com/search?q=RC0805FR-071KL}{RC0805FR-071KL} & Y & R206 & 0805 & 2 & 1 \\ \hline
   & 20K 0805$\leq$1\%$\geq$2/10W & \href{http://www.octopart.com/search?q=71-TNPW080520K0BEEN}{71-TNPW080520K0BEEN} & Y & R208,R213 & 0805 & 2 & 2 \\ \hline
-  & 50-V, 8-ch darlington array & \href{http://www.octopart.com/search?q=ULN2803CDWR}{ULN2803CDWR} & Y & U201 & Custom & 16 & 1 \\ \hline
+  & 50-V, 7-ch darlington array & \href{http://www.octopart.com/search?q=ULN 2003D1013}{ULN 2003D1013} & Y & U201 & Custom & 16 & 1 \\ \hline
   & Interface - I/O Expanders In/Out I2C int & \href{http://www.octopart.com/search?q=MCP23008-E/SS}{MCP23008-E/SS} & Y & U202 & Custom & 20 & 1 \\ \hline
   & RP2040-PICO-HDR (SBC) & \href{http://www.octopart.com/search?q=RP2040-PICO-HDR}{RP2040-PICO-HDR} & Y & U301 & Custom & 40 & 1 \\ \hline

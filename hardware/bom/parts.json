@@ -19,8 +19,8 @@
 	},
 
 "U ULN2803": {
-	"mpn":["ULN2803CDWR"],
-	"spec":"50-V, 8-ch darlington array",
+	"mpn":["ULN 2003D1013"],
+	"spec":"50-V, 7-ch darlington array",
 	"assembly":"SMT",
 	"pins":16,
 	"sub":1
@@ -194,11 +194,12 @@
 	},
 
 "IC V-REG_LD117AS50TR": {
-	"mpn":["LD1117S50C-TR"],
+	"mpn":["NCP1117LPST50T3G, TS 1117 CW50"],
 	"spec":"LDO-spanningregelaars 5.0V 0.8A Positive",
 	"assembly":"SMT",
-	"pins":2,
-	"sub":1
+	"pins":4,
+	"package": "SOT223",
+	"sub":0
 	},
 
 "IC V-REG_LD117AS33TR": {

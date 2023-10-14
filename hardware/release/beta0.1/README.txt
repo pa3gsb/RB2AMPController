@@ -27,6 +27,11 @@ no special info.
 
 The Radioberry pico (RP2040) needs a firmware.
 
+##Note
+
+The schema does contain a 18 pin / 8 channel IO driver; but the footprint i selected was 16 pins. 
+
+
 
 ## Contact
 Please contact Johan, PA3GSB pa3gsb@gmail.com with any questions.
