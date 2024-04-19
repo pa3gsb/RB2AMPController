@@ -19,6 +19,8 @@
 #include "hardware/adc.h"
 #include "hardware/pwm.h"
 
+#define VERSION  0x01
+
 const uint LED_PIN = PICO_DEFAULT_LED_PIN;
 const uint BIAS_PIN = 16U;
 const uint RELAIS_PIN = 17U;
@@ -29,11 +31,13 @@ const uint PWM_FREQ = 30000; //3KHz
 #define TCP_PORT 4242
 #define DEBUG_printf printf
 #define BUF_SIZE 20
-//#define TEST_ITERATIONS 2
 #define POLL_TIME_S 5
 
 uint16_t forward_adc_value = 0;
 uint16_t reverse_adc_value = 0;
+
+uint16_t pa_temparature = 0;   // temperature in celcius.
+bool pa_temp_measure_error = false;
 
 enum PowerState {
     OFF = 0x00,
@@ -57,20 +61,18 @@ enum PowerState convertToPowerState(unsigned char stateValue) {
 }
 
 enum LPFFilter {
-    NO_LPF = 0xFF,
-    LPF_160M = 0xFE,
-    LPF_80M = 0xFD,
-    LPF_60M = 0xFB,
-    LPF_40M = 0xF8,
-    LPF_20M = 0xEF,
-    LPF_10M = 0xDF
+    NO_LPF      = 0x00,
+    LPF_160M    = 0x80,
+    LPF_80M     = 0x40,
+    LPF_60M     = 0x20,
+    LPF_40M     = 0x10,
+    LPF_20M     = 0x08,
+    LPF_10M     = 0x04
 };
 
 enum LPFFilter lpfFilter = NO_LPF;
 
 enum LPFFilter convertToLPFFilter(unsigned char filterValue) {
-
-    filterValue = ~filterValue;  //inverteren; in protocol wordt logische volgorde gebruikt; echter de HW werkt active low!
     switch (filterValue) {
         case NO_LPF:
             return NO_LPF;
@@ -111,11 +113,7 @@ enum PTTState convertToPTTState(unsigned char pttValue) {
 
 enum ActualTxState {
     TX_OFF          = 0x01,
-    TX_RELAIS_ON    = 0x02,
-    TX_BIAS_ON      = 0x03,
-    TX_ON           = 0x04,  
-    TX_BIAS_OFF     = 0x05,
-    TX_RELAIS_OFF   = 0x06
+    TX_ON           = 0x10
 };
 
 enum ActualTxState actualAmpState = TX_OFF;
@@ -125,144 +123,182 @@ void read_adc_values() {
     //read forward power
     adc_select_input(0);
     forward_adc_value = adc_read(); // Read the ADC value
-    DEBUG_printf("Forward ADC value is %d \n", forward_adc_value);
+    //DEBUG_printf("Forward ADC value is %d \n", forward_adc_value);
 
     //read reverse power
     adc_select_input(1);
     reverse_adc_value = adc_read(); // Read the ADC value
-    DEBUG_printf("Reverse ADC value is %d \n", reverse_adc_value);
+    //DEBUG_printf("Reverse ADC value is %d \n", reverse_adc_value);
 }
 
-/*  Define constants for MCP23017 I2C bus addresses
+/*
+    Define constants for MCP9808
 
-  This address is set by pulling the pins A0, A1, A2 up (to +3.3V) or down (to GND).
-  The major digit is 2, and it's set by manufacturer.
-  The minor digit is an octal numbers of the byte from pins A2, A1, A0:
+    http://adafru.it/1782
 
-  We use two MCP23017 chips per Raspberry Monotype interface.
-
-  addr  A2,A1,A0
-  0x20  0, 0, 0
-  0x21  0, 0, 1
-
-  and further chips will have:
-  0x22  0, 1, 0
-  0x23  0, 1, 1
-  0x24  1, 0, 0
-  0x25  1, 0, 1
-  0x26  1, 1, 0
-  0x27  1, 1, 1
+    i2c address 0x18
 */
 
-#define MCP0_ADDR 0x20
+#define MCP9808_ADDR 0x18
+const uint8_t REG_TEMP_CRIT = 0x04;
+const uint8_t REG_TEMP_AMB = 0x05;
+const uint8_t REG_RESOLUTION = 0x08;
 
-// Define constants for MCP23017 register numbers.
-#define IODIRA 0x00
-#define IODIRB 0x01
-#define GPIOA 0x12
-#define GPIOB 0x13
+int mcp9808_init(void) {
 
-// Define a constant for output
-#define OUTPUT 0x00
-#define ALL_HIGH 0xFF
-#define ALL_OFF 0x00
-
-uint8_t buffer[2];                              // Initialize a buffer for two bytes to write to the device
-
-void initOutputs(void) {
-  // This function sets all outputs to 0 (off, low state).
-
-  buffer[0] = GPIOA;
-  buffer[1] = ALL_HIGH;
-  int result = i2c_write_blocking(i2c_default, MCP0_ADDR, buffer, 2, false); 
-  DEBUG_printf("Result init I2C IO extender for PORTA (Ok > 0) = %x\n", result);
-
-  buffer[0] = GPIOB;
-  buffer[1] = ALL_OFF;
-  result = i2c_write_blocking(i2c_default, MCP0_ADDR, buffer, 2, false); 
-  DEBUG_printf("Result init I2C IO extender for PORTB (Ok > 0) = %x\n", result);
-}
-
-int mcp_init(void) {
-    // This example will use I2C0 on the default SDA and SCL pins (4, 5 on a Pico)
-    i2c_init(i2c_default, 400 * 1000);
+    i2c_init(i2c0, 400 * 1000);
     gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
     gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
     gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
     gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
-    // Make the I2C pins available to picotool
-    bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
+
+    bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN,  GPIO_FUNC_I2C));
+}
 
 
-  // First, we must set the I/O direction to output.
-  // Write 0x00 to all IODIRA and IODIRB registers.
-  buffer[0] = IODIRA;
-  buffer[1] = OUTPUT;
-  if (i2c_write_blocking(i2c_default, MCP0_ADDR, buffer, 2, false) ==  PICO_ERROR_GENERIC) DEBUG_printf("Error writing to IO extender\n");
+float mcp9808_convert_temp(uint8_t upper_byte, uint8_t lower_byte) {
 
-  buffer[0] = IODIRB;
-  buffer[1] = OUTPUT;
-  if (i2c_write_blocking(i2c_default, MCP0_ADDR, buffer, 2, false) ==  PICO_ERROR_GENERIC) DEBUG_printf("Error writing to IO extender\n"); 
- 
-  initOutputs();
+    float temperature;
+
+    //Check if TA <= 0°C and convert to denary accordingly
+    if ((upper_byte & 0x10) == 0x10) {
+        upper_byte = upper_byte & 0x0F;
+        temperature = 256 - (((float) upper_byte * 16) + ((float) lower_byte / 16));
+    } else {
+        temperature = (((float) upper_byte * 16) + ((float) lower_byte / 16));
+    }
+    return temperature;
+}
+
+
+bool mcp9808_readtemperature(void) {
+
+    uint8_t buf[2];
+    uint16_t upper_byte;
+    uint16_t lower_byte;
+
+    float temperature;
+
+    int result = i2c_write_timeout_us(i2c_default, MCP9808_ADDR, &REG_TEMP_AMB, 1, true, 1000);
+    if (result == PICO_ERROR_GENERIC) {
+        printf("failure in connecting / writing to temperature sensor\n"); 
+        return false;
+    } 
+    if (result == PICO_ERROR_TIMEOUT) {
+        printf("timeout in writing to temperature sensor\n"); 
+        return false;
+    } 
+
+    result = i2c_read_timeout_us(i2c_default, MCP9808_ADDR, buf, 2, false, 1000);
+    if (result == PICO_ERROR_GENERIC ) {
+        printf("failure in connecting / reading temperature sensor\n"); 
+        return false; 
+    };
+    if (result == PICO_ERROR_TIMEOUT) {
+        printf("timeout in reading from temperature sensor\n"); 
+        return false;
+    } 
+
+    upper_byte = buf[0];
+    lower_byte = buf[1];
+
+    //clears flag bits in upper byte
+    temperature = mcp9808_convert_temp(upper_byte & 0x1F, lower_byte);
+    //printf("PA temperature: %.4f°C\n", temperature);
+    pa_temparature = (temperature > 0.0) ? (uint16_t)(temperature + 0.5) : (uint16_t)(temperature - 0.5);
+    //printf("PA temperature: %d°C\n", pa_temparature);
+
+    return true;
+}
+
+
+/*  Define constants for MCP23008 I2C bus addresses
+    This address is set by pulling the pins A0, A1, A2 up/high (to +3.3V) or down/low (to GND).
+    addr  A2,A1,A0 =>   0x20  0, 0, 0
+*/
+
+#define MCP0_ADDR 0x20
+
+
+// Define constants for MCP23008 register numbers.
+#define IODIR   0x00
+#define GPIO    0x09
+
+// Define a constant for output
+#define OUTPUT   0x00
+#define ALL_HIGH 0xFF
+#define ALL_LOW  0x00
+                  
+void initOutputs(void) {
+  uint8_t buffer[2]; 
+
+  buffer[0] = GPIO;
+  buffer[1] = ALL_LOW;
+
+  int result = i2c_write_blocking(i2c1, MCP0_ADDR, buffer, 2, false); 
+  DEBUG_printf("Result init I2C IO extender (Ok > 0) = %x\n", result);
+}
+
+int mcp_init(void) {
+
+    i2c_init(i2c1, 400 * 1000);
+    gpio_set_function(PICO_I2C0_SDA_PIN, GPIO_FUNC_I2C);
+    gpio_set_function(PICO_I2C0_SCL_PIN, GPIO_FUNC_I2C);
+    gpio_pull_up(PICO_I2C0_SDA_PIN);
+    gpio_pull_up(PICO_I2C0_SCL_PIN);
+    
+    // printf("\nI2C Bus Scan for finding connected i2c devices\n");
+    // printf("   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
+
+    // for (int addr = 0; addr < (1 << 7); ++addr) {
+    //   if (addr % 16 == 0) {
+    //     printf("%02x ", addr);
+    //   }
+    //   int ret;
+    //   uint8_t rxdata;
+    //   ret = i2c_read_blocking(i2c1, addr, &rxdata, 1, false);
+
+    //   printf(ret < 0 ? "." : "@");
+    //   printf(addr % 16 == 15 ? "\n" : "  ");
+    // }
+
+
+    // First, we must set the I/O direction to output. Write 0x00 to IODIR register.
+    uint8_t buffer[2];
+    buffer[0] = IODIR;
+    buffer[1] = OUTPUT;
+    if (i2c_write_blocking(i2c1, MCP0_ADDR, buffer, 2, false) ==  PICO_ERROR_GENERIC) DEBUG_printf("Error writing to IO extender\n");
+
+    initOutputs();
 }
 
 void setIOExtenderLPF(int byte) {
-  buffer[0] = GPIOA;
-  buffer[1] = byte;
-  if (i2c_write_blocking(i2c_default, MCP0_ADDR, buffer, 2, false) ==  PICO_ERROR_GENERIC) DEBUG_printf("Error writing to IO extender\n");
+    uint8_t buffer[2];
+    buffer[0] = GPIO;
+    buffer[1] = byte;
+    if (i2c_write_blocking(i2c1, MCP0_ADDR, buffer, 2, false) ==  PICO_ERROR_GENERIC) DEBUG_printf("Error writing to IO extender\n");
 }
 
+ void execute_sequencer_switch_pa_on(void) {
+    //sequencer
+    if (actualAmpState == TX_OFF) {
+        sleep_ms(15);
+        gpio_put(RELAIS_PIN, 1);
+        sleep_ms(15);
+        gpio_put(BIAS_PIN, 1); 
+        actualAmpState = TX_ON;
+    }      
+ }
 
-
-// void send_bytes(int byte1, int byte2) {
-//   buffer[0] = GPIOA;
-//   buffer[1] = byte1;
-//   if (i2c_write_blocking(i2c_default, MCP0_ADDR, buffer, 2, false) ==  PICO_ERROR_GENERIC) DEBUG_printf("Error writing to IO extender\n");
-
-//   buffer[0] = GPIOB;
-//   buffer[1] = byte2;
-//   if (i2c_write_blocking(i2c_default, MCP0_ADDR, buffer, 2, false) ==  PICO_ERROR_GENERIC) DEBUG_printf("Error writing to IO extender\n"); 
-// }
-
- void execute_sequencer(void) {
-        //sequencer
-        if (pttState == PA_ON ) {
-                if (actualAmpState == TX_OFF) {
-                    sleep_ms(15);
-                    actualAmpState = TX_RELAIS_ON;
-                    gpio_put(BIAS_PIN, 0); 
-                    
-                }
-                if (actualAmpState == TX_RELAIS_ON) {
-                    sleep_ms(15);
-                    gpio_put(RELAIS_PIN, 0); 
-                    actualAmpState = TX_BIAS_ON;
-                    
-                }
-                if (actualAmpState == TX_BIAS_ON) {
-                    gpio_put(BIAS_PIN, 0); 
-                    gpio_put(RELAIS_PIN, 0); 
-                    actualAmpState = TX_ON;
-                }
-        }
-        if (pttState == PA_OFF ) {
-                if (actualAmpState == TX_ON) {
-                    // no sleep
-                    gpio_put(BIAS_PIN, 1);
-                    actualAmpState = TX_RELAIS_ON;
-                }
-                if (actualAmpState == TX_RELAIS_ON) {
-                    sleep_ms(15);
-                    gpio_put(RELAIS_PIN, 1);
-                    actualAmpState = TX_BIAS_ON;
-                }
-                if (actualAmpState == TX_BIAS_ON) {
-                    gpio_put(BIAS_PIN, 1);
-                    gpio_put(RELAIS_PIN, 1);
-                    actualAmpState = TX_OFF;
-                }
-        }
+ void execute_sequencer_switch_pa_off(void) {
+    //sequencer
+    if (actualAmpState == TX_ON) {
+        sleep_ms(15);
+        gpio_put(BIAS_PIN, 0);
+        sleep_ms(15);
+        gpio_put(RELAIS_PIN, 0);
+        actualAmpState = TX_OFF;
+    } 
  }
 
 typedef struct TCP_SERVER_T_ {
@@ -325,25 +361,33 @@ static err_t tcp_server_result(void *arg, int status) {
 
 static err_t tcp_server_sent(void *arg, struct tcp_pcb *tpcb, u16_t len) {
     TCP_SERVER_T *state = (TCP_SERVER_T*)arg;
-    DEBUG_printf("tcp_server_sent %u\n", len);
+    //DEBUG_printf("tcp_server_sent %u\n", len);
     state->sent_len += len;
 
     if (state->sent_len >= BUF_SIZE) {
         // We should get the data back from the client
         state->recv_len = 0;
-        DEBUG_printf("Waiting for buffer from client\n");
+        //DEBUG_printf("Waiting for buffer from client\n");
     }
     return ERR_OK;
 }
 
-unsigned char reply[5] = {0x00, 0x00, 0xef, 0xfe, 0x01};  //calc at firmware => 0x01 = version 1/10 = 0.1
+unsigned char reply[5] = {0x00, 0x00, 0xef, 0xfe, VERSION};  //calc at firmware => 0x01 = version 1/10 = 0.1
 
 err_t tcp_server_send_data(void *arg, struct tcp_pcb *tpcb)
 {
     TCP_SERVER_T *state = (TCP_SERVER_T*)arg;
     memcpy(state->buffer_sent, reply, 5);
     for(int i=5; i< BUF_SIZE; i++) {
-        state->buffer_sent[i] = 0x0; //'b' ; //rand();
+        state->buffer_sent[i] = 0x0; 
+    }
+    // temperature
+    if (pa_temp_measure_error) {
+        state->buffer_sent[5] =  0xFF; //ERROR reading temperature; switch off tx mode.
+        state->buffer_sent[6] =  0;
+    } else {
+        state->buffer_sent[5] =  0x00;
+        state->buffer_sent[6] =  (pa_temparature & 0xFF); // temperature is N digit.
     }
     read_adc_values(); // not in loop for now.
     uint16_t forward = forward_adc_value;
@@ -353,11 +397,11 @@ err_t tcp_server_send_data(void *arg, struct tcp_pcb *tpcb)
     state->buffer_sent[9] = (reverse >> 8) & 0xFF;  //msb
     state->buffer_sent[10] = reverse & 0xFF; 
 
-     DEBUG_printf("Forward voltage  %d\n", forward);
-      DEBUG_printf("Reverse voltage  %d\n", reverse);
+    //DEBUG_printf("Forward voltage  %d\n", forward);
+    //DEBUG_printf("Reverse voltage  %d\n", reverse);
 
     state->sent_len = 0;
-    DEBUG_printf("Writing %ld bytes to client\n", BUF_SIZE);
+    //DEBUG_printf("Writing %ld bytes to client\n", BUF_SIZE);
 
     err_t err = tcp_write(tpcb, state->buffer_sent, BUF_SIZE, TCP_WRITE_FLAG_COPY);
     if (err != ERR_OK) {
@@ -376,7 +420,7 @@ err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err
     }
     
     if (p->tot_len > 0) {
-        DEBUG_printf("tcp_server_recv %d/%d err %d\n", p->tot_len, state->recv_len, err);
+        //DEBUG_printf("tcp_server_recv %d/%d err %d\n", p->tot_len, state->recv_len, err);
 
         // Receive the buffer
         const uint16_t buffer_left = BUF_SIZE - state->recv_len;
@@ -387,11 +431,11 @@ err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err
     pbuf_free(p);
 
     if (state->recv_len == BUF_SIZE) {
-        DEBUG_printf("tcp_server_recv buffer ok\n");
+        //DEBUG_printf("tcp_server_recv buffer ok\n");
 
         uint32_t code;
         memcpy(&code, state->buffer_recv, 4);
-        DEBUG_printf("code = %x\n", code);
+        //DEBUG_printf("code = %x\n", code);
         switch (code)
         {
             default:
@@ -405,17 +449,17 @@ err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err
                 break;
             case 0xfeef0000:
                 {
-                    DEBUG_printf("message for PA controller\n");
-                    for(int i=0; i< BUF_SIZE; i++) {
-                            DEBUG_printf("%x-", state->buffer_recv[i]);
-                    }
-                    DEBUG_printf("\n");
+                    //DEBUG_printf("message for PA controller\n");
+                    //for(int i=0; i< BUF_SIZE; i++) {
+                            //DEBUG_printf("%x-", state->buffer_recv[i]);
+                    //}
+                    //DEBUG_printf("\n");
                     deviceState = convertToPowerState(state->buffer_recv[4]);
                     if (deviceState == ACTIVE) DEBUG_printf("PA Controller active \n"); else DEBUG_printf("PA Controller not active / standby\n");
                     pttState = convertToPTTState(state->buffer_recv[5]);
                     if (pttState == PA_ON) DEBUG_printf("PTT on \n"); else DEBUG_printf("PTT off\n");
                     lpfFilter = convertToLPFFilter(state->buffer_recv[6]);
-                    DEBUG_printf("LPF is set to %x \n", lpfFilter);
+                    //DEBUG_printf("LPF is set to %x \n", lpfFilter);
                 }
                 break;
         }
@@ -491,13 +535,9 @@ static bool tcp_server_open(void *arg) {
     return true;
 }
 
-
-
-
-
-int blink_toggle = 0;
-
 void run_tcp_server(void) {
+    int blink_toggle = 0;
+
     TCP_SERVER_T *state = tcp_server_init();
     if (!state) {
         return;
@@ -506,6 +546,20 @@ void run_tcp_server(void) {
         tcp_server_result(state, -11);
         return;
     }
+
+    // Initialize PWM slice 0 on GPIO pin 1
+    gpio_set_function(1, GPIO_FUNC_PWM);
+    uint slice_num = pwm_gpio_to_slice_num(1); // get slice for pin 1.
+
+    // Set PWM frequency and duty cycle
+    pwm_config config = pwm_get_default_config();
+    // Set the PWM frequency to 30 kHz
+    pwm_config_set_clkdiv(&config, 4); // Pico runs at 125 MHz (5 is for 25KHz // 6 for 20KHz)
+    pwm_init(slice_num, &config, true);
+
+    uint16_t pwm_level = pwm_hw->slice[slice_num].top;
+    //DEBUG_printf("PWM max level  %d \n", pwm_level);
+   
     //while(!state->complete) {
     while(true) {
         sleep_ms(1);
@@ -516,8 +570,19 @@ void run_tcp_server(void) {
         (deviceState == OFF) ? gpio_put(LED_PIN, 0) :  (deviceState == STANDBY) ? (blink_toggle > 500) ? gpio_put(LED_PIN, 0) : gpio_put(LED_PIN, 1) : (deviceState == ACTIVE) ? gpio_put(LED_PIN, 1): blink_toggle++;
 
         if (actualAmpState == TX_OFF)  setIOExtenderLPF(lpfFilter); // only setting filters via IO extender;  if not in TX mode.
-       
-        execute_sequencer();
+
+        // if the temperature could not be deterimined do switch PTT off.
+        if (!mcp9808_readtemperature()) {
+            pa_temp_measure_error = true;   
+            execute_sequencer_switch_pa_off();
+        } else {
+            pa_temp_measure_error = false;
+            if (pttState == PA_ON ) execute_sequencer_switch_pa_on();
+            if (pttState == PA_OFF ) execute_sequencer_switch_pa_off();
+        }
+        // Calculate PWM level based on temperature to set the FAN; in case of temp reading error => FAN max.
+        uint16_t pwm_level = ( (pa_temparature > 25) || pa_temp_measure_error ) ? 65535 : 32767;
+        pwm_set_gpio_level(1, pwm_level); 
     }
     free(state);
 }
@@ -533,10 +598,17 @@ void netif_status_callback(struct netif *netif)
 }
 
 int main() {
+	// initialiseer IO
+    gpio_init(BIAS_PIN);
+    gpio_set_dir(BIAS_PIN, GPIO_OUT);
+    gpio_put(BIAS_PIN, 0);
+    gpio_init(RELAIS_PIN);
+    gpio_set_dir(RELAIS_PIN, GPIO_OUT);
+    gpio_put(RELAIS_PIN, 0);
+	
     // LWIP network interface
     struct netif netif;
 
-    //
     struct netif_rmii_ethernet_config netif_config = {
         pio0, // PIO:            0
         0,    // pio SM:         0 and 1
@@ -553,8 +625,6 @@ int main() {
     // initialize stdio after the clock change
     stdio_init_all();
     sleep_ms(5000);
-    
-    printf("pico rmii ethernet\n");
 
     // initilize LWIP in NO SYS mode
     lwip_init();
@@ -588,12 +658,13 @@ int main() {
     // initialiseer IO
     gpio_init(BIAS_PIN);
     gpio_set_dir(BIAS_PIN, GPIO_OUT);
-    gpio_put(BIAS_PIN, 1);
+    gpio_put(BIAS_PIN, 0);
     gpio_init(RELAIS_PIN);
     gpio_set_dir(RELAIS_PIN, GPIO_OUT);
-    gpio_put(RELAIS_PIN, 1);
+    gpio_put(RELAIS_PIN, 0);
 
-    // initialiseer IO extender.
+    // initialiseer temperature sensor and IO extender.
+    mcp9808_init(); 
     mcp_init();
 
     // initialiseer RP2040 ADC's
@@ -601,27 +672,9 @@ int main() {
     adc_gpio_init(26);  //ADC0
     adc_gpio_init(27);  //ADC1
 
-  
-    // Initialize PWM slice 0 on GPIO pin 1
-    gpio_set_function(1, GPIO_FUNC_PWM);
-    uint slice_num = pwm_gpio_to_slice_num(1); // get slice for pin 1.
-
-    // Set PWM frequency and duty cycle
-    pwm_config config = pwm_get_default_config();
-    // Set the PWM frequency to 30 kHz
-    pwm_config_set_clkdiv(&config, 4); // Pico runs at 125 MHz (5 is for 25KHz // 6 for 20KHz)
-    pwm_init(slice_num, &config, true);
-
-    // Calculate PWM level for 50% duty cycle; 
-    uint16_t pwm_level = pwm_hw->slice[slice_num].top;
-    DEBUG_printf("PWM max level  %d \n", pwm_level);
-    pwm_set_gpio_level(1, pwm_level / 2); //dit gaan we verplaatsen 
-
-
     run_tcp_server();
 
     return 0;
 }
-
 
 //end of file.
