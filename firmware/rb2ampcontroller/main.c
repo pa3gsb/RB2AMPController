@@ -21,6 +21,13 @@
 
 #define VERSION  0x01
 
+#ifndef PICO_I2C0_SDA_PIN
+#define PICO_I2C0_SDA_PIN 2
+#endif
+#ifndef PICO_I2C0_SCL_PIN
+#define PICO_I2C0_SCL_PIN 3
+#endif
+
 const uint LED_PIN = PICO_DEFAULT_LED_PIN;
 const uint BIAS_PIN = 16U;
 const uint RELAIS_PIN = 17U;
